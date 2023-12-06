@@ -47,11 +47,10 @@ namespace Quest
                 Length = 72,
                 Colors = ["cerulean", "vermillion", "chartreuse", "peridot", "violet"]
             };
-            var myHat = new Hat
-            {
-                ShininessLevel = 11
-            };
+            var myHat = new Hat();
+            myHat.ShininessLevel = 11;
             // Make a new "Adventurer" object using the "Adventurer" class
+            var pizzaHutCoupon = new Prize("A Pizza Hut coupon valid for a free large pizza with the purchase of two or more large pizzas.");
             Console.WriteLine("--------------------------");
              Console.WriteLine("Prepare for a quest!");
              Console.WriteLine("--------------------------");
@@ -100,6 +99,7 @@ namespace Quest
 
             void Repeat()
             {
+                pizzaHutCoupon.ShowPrize(theAdventurer);
                 Console.WriteLine("Repeat the Quest? (y/n)");
                 string Answer = Console.ReadLine();
                 if (Answer == "y" || Answer == "n")
