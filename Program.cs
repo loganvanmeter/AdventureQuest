@@ -42,15 +42,19 @@ namespace Quest
             //  If an Adventurer has an Awesomeness less than the min, they are terrible
             int minAwesomeness = 0;
             int maxAwesomeness = 100;
-
+            var rainbowRobe = new Robe
+            {
+                Length = 72,
+                Colors = ["cerulean", "vermillion", "chartreuse", "peridot", "violet"]
+            };
             // Make a new "Adventurer" object using the "Adventurer" class
             Console.WriteLine("--------------------------");
              Console.WriteLine("Prepare for a quest!");
              Console.WriteLine("--------------------------");
              Console.WriteLine("What's your name adventurer?");
              string Name = Console.ReadLine();
-            Adventurer theAdventurer = new Adventurer(Name);
-
+            Adventurer theAdventurer = new Adventurer(Name, rainbowRobe);
+            
             // A list of challenges for the Adventurer to complete
             // Note we can use the List class here because have the line "using System.Collections.Generic;" at the top of the file.
             List<Challenge> challenges = new List<Challenge>()
@@ -61,9 +65,12 @@ namespace Quest
                 guessRandom,
                 favoriteBeatle
             };
+
+           
             RunQuest();
             void RunQuest()
             {
+            theAdventurer.GetDescription();
             // Loop through all the challenges and subject the Adventurer to them
             foreach (Challenge challenge in challenges)
             {
