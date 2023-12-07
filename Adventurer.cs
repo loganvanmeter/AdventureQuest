@@ -13,6 +13,8 @@ namespace Quest
         //  So it can be read and changed by any code in the application
         public int Awesomeness { get; set; }
 
+        public int SuccessCount {get; set;}
+
         // A constructor to make a new Adventurer object with a given name
         public Adventurer(string name, Robe robe, Hat hat)
         {
@@ -20,6 +22,7 @@ namespace Quest
             Awesomeness = 50;
             ColorfulRobe = robe;
             Hat = hat;
+            SuccessCount = 0;
         }
 
 

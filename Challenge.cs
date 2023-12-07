@@ -37,6 +37,7 @@ namespace Quest
             if (isNumber && numAnswer == _correctAnswer)
             {
                 Console.WriteLine("Well Done!");
+                adventurer.SuccessCount ++;
 
                 // Note how we access an Adventurer object's property
                 adventurer.Awesomeness += _awesomenessChange;

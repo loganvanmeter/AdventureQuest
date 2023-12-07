@@ -112,11 +112,12 @@ namespace Quest
                 largestOrganism,
                 mouseSpeed
             };
-
+           
            RunQuest();
             void RunQuest()
             {
             theAdventurer.GetDescription();
+           
             // Loop through all the challenges and subject the Adventurer to them
             List<int> selectedChallenges = new List<int>();
             void RunRandomChallenges(){
@@ -130,7 +131,11 @@ namespace Quest
                 }
             }
             void RunThisQuest (){
+                
             for(int i = 0; i < 5; i++){
+                Console.WriteLine("--------------------------");
+                Console.WriteLine($" Successful Guesses: {theAdventurer.SuccessCount} ");
+                Console.WriteLine("--------------------------");
                RunRandomChallenges();
             }
             }
@@ -152,16 +157,16 @@ namespace Quest
             }
 
             Console.WriteLine("");
-
+            pizzaHutCoupon.ShowPrize(theAdventurer);
             void Repeat()
             {
-                pizzaHutCoupon.ShowPrize(theAdventurer);
                 Console.WriteLine("Repeat the Quest? (y/n)");
                 string Answer = Console.ReadLine();
                 if (Answer == "y" || Answer == "n")
                 {
                 if (Answer == "y"){
-                    theAdventurer.Awesomeness = 50;
+                    theAdventurer.Awesomeness += theAdventurer.SuccessCount * 10;
+                    theAdventurer.SuccessCount = 0;
                     RunQuest();
                 }
                 } else {
