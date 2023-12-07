@@ -52,6 +52,7 @@ namespace Quest
         public void GetDescription()
         {
             Console.WriteLine($"{Name} is wearing a {Hat.ShininessDescription()} hat and donned in a {ColorfulRobe.Length}in long robe that shines with the colors of {String.Join(", ", ColorfulRobe.Colors)}.");
+            Console.WriteLine("");
         }
     }
 }

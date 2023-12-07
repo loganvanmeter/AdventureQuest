@@ -10,7 +10,7 @@ namespace Quest
         public void ShowPrize(Adventurer adventurer)
         {
             if(adventurer.Awesomeness > 0){
-                for (int i = 0; i < adventurer.Awesomeness; i++){
+                for (int i = 1; i <= adventurer.Awesomeness; i++){
                 Console.WriteLine(_text);
                 }
             } else if (adventurer.Awesomeness <= 0){

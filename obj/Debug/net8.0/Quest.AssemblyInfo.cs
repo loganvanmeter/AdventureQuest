@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Quest")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+73884f314245e6c65d0e006a38d4467080c1a8d5")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+f8367dcdc97884ba858d0f7b62840c3e2a0f7e41")]
 [assembly: System.Reflection.AssemblyProductAttribute("Quest")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Quest")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
